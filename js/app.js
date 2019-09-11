@@ -62,5 +62,7 @@ const pictures = [
         alt: "Bluebells",
         caption: "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
     }
-
 ]
+
+$roadtrip = $('figure img').attr("data-lightbox", "roadtrip");
+console.log($roadtrip);
