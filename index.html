@@ -17,16 +17,17 @@
             <h4>This year I travelled to a new place every month and, of course, I took a lot of pictures. The images below include a single photo from each experience that I believe most captures the essence of that trip.</h4>
         </div>
     <div class="container">
-        <div class="search">
+        <div class="searchContainer">
             <h2>Use the search bar below to find a particular experience or terrain</h2>
-            <input type="text" id="searchInput" placeholder="Search Here">
+            <input type="text" id="searchInput" placeholder="Search Here" class="search">
         </div>
-        <div class="thumbnails">
+        <!-- jQuery Plugin for photo lightbox: https://www.lokeshdhakar.com/projects/lightbox2/ -->
+        <div class="thumbnails" id="shuffleContainer">
 
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/01.jpg" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
-                        <img src="photos/thumbnails/01.jpg" alt="Hay Bales" data-title="Hay Bales">
+                        <img src="photos/thumbnails/01.jpg" alt="Hay Bales" data-title="Hay Bales" class="shuffle-item">
                     </a>
                     <figcaption>
                         I love hay bales. Took this snap on a drive through the countryside past some
@@ -37,7 +38,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/02.jpg" data-title="The lake was so calm today. We had a great view of the snow on the mountains from here.">
-                        <img src="photos/thumbnails/02.jpg" alt="Lake"></img>
+                        <img src="photos/thumbnails/02.jpg" alt="Lake" class="shuffle-item">
                     </a>
                     <figcaption>
                         The lake was so calm today. We had a great view of the snow on the mountains
@@ -48,7 +49,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/03.jpg" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-                        <img src="photos/thumbnails/03.jpg" alt="Canyon">
+                        <img src="photos/thumbnails/03.jpg" alt="Canyon" class="shuffle-item">
                     </a>
                     <figcaption>
                         I hiked to the top of the mountain and got this picture of the canyon and trees
@@ -59,7 +60,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/04.jpg" data-title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
-                        <img src="photos/thumbnails/04.jpg" alt="Iceberg">
+                        <img src="photos/thumbnails/04.jpg" alt="Iceberg" class="shuffle-item">
                     </a>
                     <figcaption>
                         It was amazing to see an iceberg up close, it was so cold but didn’t snow today.
@@ -69,7 +70,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/05.jpg" data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
-                        <img src="photos/thumbnails/05.jpg" alt="Desert">
+                        <img src="photos/thumbnails/05.jpg" alt="Desert" class="shuffle-item">
                     </a>
                     <figcaption>
                         The red cliffs were beautiful. It was really hot in the desert but we did a lot
@@ -80,7 +81,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/06.jpg" data-title="Fall is coming, I love when the leaves on the trees start to change color.">
-                        <img src="photos/thumbnails/06.jpg" alt="Fall">
+                        <img src="photos/thumbnails/06.jpg" alt="Fall" class="shuffle-item">
                     </a>
                     <figcaption>
                         Fall is coming, I love when the leaves on the trees start to change color.
@@ -90,7 +91,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/07.jpg" data-title="I drove past this plantation yesterday, everything is so green!">
-                        <img src="photos/thumbnails/07.jpg" alt="Plantation">
+                        <img src="photos/thumbnails/07.jpg" alt="Plantation" class="shuffle-item">
                     </a>
                     <figcaption>
                         I drove past this plantation yesterday, everything is so green!
@@ -100,7 +101,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/08.jpg" data-title="My summer vacation to the Oregon Coast. I love the sandy dunes!">
-                        <img src="photos/thumbnails/08.jpg" alt="Dunes">
+                        <img src="photos/thumbnails/08.jpg" alt="Dunes" class="shuffle-item">
                     </a>
                     <figcaption>
                         My summer vacation to the Oregon Coast. I love the sandy dunes!
@@ -110,7 +111,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/09.jpg" data-title="We enjoyed a quiet stroll down this countryside lane.">
-                        <img src="photos/thumbnails/09.jpg" alt="Countryside Lane">
+                        <img src="photos/thumbnails/09.jpg" alt="Countryside Lane" class="shuffle-item">
                     </a>
                     <figcaption>
                         We enjoyed a quiet stroll down this countryside lane.
@@ -120,7 +121,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/10.jpg" data-title="Sunset at the coast! The sky turned a lovely shade of orange.">
-                        <img src="photos/thumbnails/10.jpg" alt="Sunset">
+                        <img src="photos/thumbnails/10.jpg" alt="Sunset" class="shuffle-item">
                     </a>
                     <figcaption>
                         Sunset at the coast! The sky turned a lovely shade of orange.
@@ -130,7 +131,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/11.jpg" data-title="I did a tour of a cave today and the view of the landscape below was breathtaking.">
-                        <img src="photos/thumbnails/11.jpg" alt="Cave">
+                        <img src="photos/thumbnails/11.jpg" alt="Cave" class="shuffle-item">
                     </a>
                     <figcaption>
                         I did a tour of a cave today and the view of the landscape below was
@@ -141,7 +142,7 @@
             <div class="thumbContainer">
                 <figure>
                     <a href="photos/12.jpg" data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
-                        <img src="photos/thumbnails/12.jpg" alt="Bluebells">
+                        <img src="photos/thumbnails/12.jpg" alt="Bluebells" class="shuffle-item">
                     </a>
                     <figcaption>
                         I walked through this meadow of bluebells and got a good view of the snow on the
