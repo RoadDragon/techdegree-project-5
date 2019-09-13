@@ -62,4 +62,106 @@ const pictures = [
         caption: "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
     }
 ]
+
+
+//add data-lightbox attribute to anchor tags for LightBox2 functionality
 const $roadtrip = $('figure a').attr("data-lightbox", "roadtrip");
+
+
+//************************************************************************
+
+// console.log lowercase version of whatever is typed into input: from https://stackoverflow.com/questions/41817155/filtering-images-live-search-by-caption
+// let $search = $('#searchInput');
+let $imgs = $('img');
+
+
+// $search.keyup(function(event) {
+//     let value = $search.val().toLowerCase();
+//     $imgs.show();
+//     if (value !== '') {
+//         $imgs.not('[data-title*="' + value + '"]').hide();
+//     };
+// });
+
+//************************************************************************
+
+//console log the lowercase version of whatever is typed into the input
+let $inputValue = $('#searchInput').on('keyup', function() {
+    console.log(this.value);
+    let lowerCase = (this.value).toLowerCase();
+    // console.log(lowerCase);
+});
+
+//loop through the images
+let $titleValue = $('img').each(function(index, element){
+    console.log(index, $(element).attr('data-title'));
+    value = $(element).attr('data-title');
+    $imgs.show();
+    if (value !== '') {
+        $('img').hide();
+    };
+});
+
+
+// console.log($inputValue);
+// console.log(($titleValue).attr('data-title'));
+
+
+// if ($inputValue !== '') {
+//     $('img').hide();
+// } else {
+//     $('img').show();
+// }
+
+//************************************************************************
+
+// for (i=1; i+=length.imageItem; i++) {
+//     //define caption as the data-title 
+//     let imageCaption = $('.shuffle-item').attr('data-title');
+//     imageCaption = (this.value).toLowerCase();
+//     console.log(imageCaption);
+// }
+
+
+//LightBox2 ------------------------------ 
+// mobile styling
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+  })
+
+
+
+
+
+
+
+
+  // DELETE ALL OF THIS BEFORE SUBMITTING!!! 
+//list.js ------------------------------ 
+// let options = {
+//     valueNames: ['data-title']
+// };
+// let imageList = new ListeningStateChangedEvent()
+
+
+//shuffle.js ------------------------------ not using right now
+// const gridContainer = $('#shuffleContainer');
+// Advanced filtering
+// Demo.prototype.addSearchFilter = function () {
+//     document.querySelector('.js-shuffle-search').addEventListener('keyup', this._handleSearchKeyup.bind(this));
+// };
+// Demo.prototype.addSearchFilter = function () {
+//     document.querySelector('.searchInput').addEventListener('keyup', this._handleSearchKeyup.bind(this));
+// };
+
+// Filter the shuffle instance by items with a title that matches the search input.
+// Demo.prototype._handleSearchKeyup = function (evt) {
+//     var searchText = evt.target.value.toLowerCase();
+
+//     this.shuffle.filter(function (element, shuffle) {
+//         var titleElement = element.querySelector('.data-title');
+//         var titleText = titleElement.textContent.toLowerCase().trim();
+
+//         return titleText.indexOf(searchText) !== -1;
+//     });
+// };

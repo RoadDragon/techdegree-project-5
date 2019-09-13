@@ -77,6 +77,18 @@ figcaption {
     width: 200px;
 }
 
+/* lightbox2 styling for mobile */
+.lb-image, .lb-dataContainer {
+ max-width: 100%;
+ height: auto !important;
+ width: 100%;
+}
+
+.lb-outerContainer {
+ max-width: 100%;
+ height: auto !important;
+}
+
 @media (min-width: 768px) {
 
     h1 {
