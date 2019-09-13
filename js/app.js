@@ -90,15 +90,16 @@ let $inputValue = $('#searchInput').on('keyup', function() {
     console.log(this.value);
     let lowerCase = (this.value).toLowerCase();
     // console.log(lowerCase);
+    // return lowerCase;
 });
 
 //loop through the images
-let $titleValue = $('img').each(function(index, element){
+$('img').each(function(index, element){
     console.log(index, $(element).attr('data-title'));
-    value = $(element).attr('data-title');
+    $(element).attr('data-title');
     $imgs.show();
-    if (value !== '') {
-        $('img').hide();
+    if ($inputValue !== $(element).attr('data-title')) {   //this is what is making the images not show up
+        $imgs.hide();  //this is what is making the images not show up
     };
 });
 
