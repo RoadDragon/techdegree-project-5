@@ -71,37 +71,37 @@ const $roadtrip = $('figure a').attr("data-lightbox", "roadtrip");
 //************************************************************************
 
 // console.log lowercase version of whatever is typed into input: from https://stackoverflow.com/questions/41817155/filtering-images-live-search-by-caption
-// let $search = $('#searchInput');
+let $search = $('#searchInput');
 let $imgs = $('img');
 
 
-// $search.keyup(function(event) {
-//     let value = $search.val().toLowerCase();
-//     $imgs.show();
-//     if (value !== '') {
-//         $imgs.not('[data-title*="' + value + '"]').hide();
-//     };
-// });
+$search.keyup(function(event) {
+    let value = $search.val().toLowerCase();
+    $imgs.show();
+    if (value !== '') {
+        $imgs.not('[data-title*="' + value + '"]').hide();
+    };
+});
 
 //************************************************************************
 
 //console log the lowercase version of whatever is typed into the input
-let $inputValue = $('#searchInput').on('keyup', function() {
-    console.log(this.value);
-    let lowerCase = (this.value).toLowerCase();
+// let $inputValue = $('#searchInput').on('keyup', function() {
+//     console.log(this.value);
+//     let lowerCase = (this.value).toLowerCase();
     // console.log(lowerCase);
     // return lowerCase;
-});
+// });
 
 //loop through the images
-$('img').each(function(index, element){
-    console.log(index, $(element).attr('data-title'));
-    $(element).attr('data-title');
-    $imgs.show();
-    if ($inputValue !== $(element).attr('data-title')) {   //this is what is making the images not show up
-        $imgs.hide();  //this is what is making the images not show up
-    };
-});
+// $('img').each(function(index, element) {
+//     console.log(index, $(element).attr('data-title'));
+//     $(element).attr('data-title');
+//     $imgs.show();
+//     if ($inputValue !== $(element).attr('data-title')) {   //this is what is making the images not show up
+//         $imgs.hide();  //this is what is making the images not show up
+//     };
+// });
 
 
 // console.log($inputValue);
@@ -117,14 +117,14 @@ $('img').each(function(index, element){
 //************************************************************************
 
 // for (i=1; i+=length.imageItem; i++) {
-//     //define caption as the data-title 
+//     //define caption as the data-title
 //     let imageCaption = $('.shuffle-item').attr('data-title');
 //     imageCaption = (this.value).toLowerCase();
 //     console.log(imageCaption);
 // }
 
 
-//LightBox2 ------------------------------ 
+//LightBox2 ------------------------------
 // mobile styling
     lightbox.option({
         'alwaysShowNavOnTouchDevices': true,
@@ -137,8 +137,8 @@ $('img').each(function(index, element){
 
 
 
-  // DELETE ALL OF THIS BEFORE SUBMITTING!!! 
-//list.js ------------------------------ 
+  // DELETE ALL OF THIS BEFORE SUBMITTING!!!
+//list.js ------------------------------
 // let options = {
 //     valueNames: ['data-title']
 // };
