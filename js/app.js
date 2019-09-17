@@ -86,86 +86,8 @@ $search.keyup(function(event) {
 
 
 
-//************************************************************************
-
-//console log the lowercase version of whatever is typed into the input
-// let $inputValue = $('#searchInput').on('keyup', function() {
-//     console.log(this.value);
-//     let lowerCase = (this.value).toLowerCase();
-    // console.log(lowerCase);
-    // return lowerCase;
-// });
-
-//loop through the images
-// $('img').each(function(index, element) {
-//     console.log(index, $(element).attr('data-title'));
-//     $(element).attr('data-title');
-//     $imgs.show();
-//     if ($inputValue !== $(element).attr('data-title')) {   //this is what is making the images not show up
-//         $imgs.hide();  //this is what is making the images not show up
-//     };
-// });
-
-
-// console.log($inputValue);
-// console.log(($titleValue).attr('data-title'));
-
-
-// if ($inputValue !== '') {
-//     $('img').hide();
-// } else {
-//     $('img').show();
-// }
-
-//************************************************************************
-
-// for (i=1; i+=length.imageItem; i++) {
-//     //define caption as the data-title
-//     let imageCaption = $('.shuffle-item').attr('data-title');
-//     imageCaption = (this.value).toLowerCase();
-//     console.log(imageCaption);
-// }
-
-
 //LightBox2 ------------------------------
 // mobile styling
     lightbox.option({
         'alwaysShowNavOnTouchDevices': true,
   })
-
-
-
-
-
-
-
-
-  // DELETE ALL OF THIS BEFORE SUBMITTING!!!
-//list.js ------------------------------
-// let options = {
-//     valueNames: ['data-title']
-// };
-// let imageList = new ListeningStateChangedEvent()
-
-
-//shuffle.js ------------------------------ not using right now
-// const gridContainer = $('#shuffleContainer');
-// Advanced filtering
-// Demo.prototype.addSearchFilter = function () {
-//     document.querySelector('.js-shuffle-search').addEventListener('keyup', this._handleSearchKeyup.bind(this));
-// };
-// Demo.prototype.addSearchFilter = function () {
-//     document.querySelector('.searchInput').addEventListener('keyup', this._handleSearchKeyup.bind(this));
-// };
-
-// Filter the shuffle instance by items with a title that matches the search input.
-// Demo.prototype._handleSearchKeyup = function (evt) {
-//     var searchText = evt.target.value.toLowerCase();
-
-//     this.shuffle.filter(function (element, shuffle) {
-//         var titleElement = element.querySelector('.data-title');
-//         var titleText = titleElement.textContent.toLowerCase().trim();
-
-//         return titleText.indexOf(searchText) !== -1;
-//     });
-// };
