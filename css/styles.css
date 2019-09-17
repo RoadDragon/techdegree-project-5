@@ -16,7 +16,7 @@
     url('../photos/other/road-220058.jpg');
     background-repeat:no-repeat;
     background-size:100% 100%;
-    
+
 }
 /* Image by <a href="https://pixabay.com/users/Larisa-K-1107275/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=220058">Larisa Koshkina</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=220058">Pixabay</a> */
 
@@ -57,7 +57,7 @@ input {
 }
 
 .thumbContainer {
-    margin: 1.5em;
+    margin: auto;
 }
 
 img {

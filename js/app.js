@@ -72,6 +72,7 @@ const $roadtrip = $('figure a').attr("data-lightbox", "roadtrip");
 
 // console.log lowercase version of whatever is typed into input: from https://stackoverflow.com/questions/41817155/filtering-images-live-search-by-caption
 let $search = $('#searchInput');
+// let $imgs = $('img');
 let $imgs = $('img');
 
 
@@ -82,6 +83,8 @@ $search.keyup(function(event) {
         $imgs.not('[data-title*="' + value + '"]').hide();
     };
 });
+
+
 
 //************************************************************************
 
